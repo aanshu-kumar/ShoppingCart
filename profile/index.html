@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -13,13 +9,21 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
+   
+    <h1>Profile</h1>
+    <p>Update user Information</p>
+    <input id="fname" placeholder="Enter your First Name"><br>
+    <input id="lname" placeholder="Enter your Last Name"><br>
+    <input id="email" disabled>
+    <button id="submit"> Submit</button>
+    <p id="error_msg"></p>
+    <p>Update Credentials</p>
+    <input id="oldpassword" placeholder="Enter your Old Password"><br>
+    <input id="newpassword" placeholder="Enter your New Password"><br>
+    <input id="confirmpassword" placeholder="Enter confirm password"> <br>
+    <button id="changePasswordBtn"> Change Password</button>
+    <p id="error_msg2"></p>
 
-    <script src="" async defer></script>
+    <script src="./script.js"></script>
   </body>
 </html>
