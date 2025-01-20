@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
             error_msg.textContent = "Logging in...";
             error_msg.style.color = "green";
             localStorage.setItem("currentUsr", JSON.stringify({...user[0],token:generateToken()})) 
-            window.location.href = "../profile/index.html";           
+            localStorage.setItem("cart",JSON.stringify([]));
+
+            window.location.href = "../shop/index.html";           
             email.value = "";
             password.value = "";
           } else {

@@ -1,1 +1,90 @@
 /* Write styles here */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav .nav-items a {
+    margin: 0 1rem;
+  }
+  main{
+    margin:20px 50px ;
+  }
+  main h1{
+    font-size: 50px;
+    font-weight: 400;
+    padding: 20px 0px;
+  }
+  main p{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  #container{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+  }
+  #btn{
+    width: 35%;
+  }
+  #img{
+    width: 50%;
+  }
+  #img img{
+    width: 100%;
+    object-fit: cover;
+  }
+  button{
+    padding: 10px 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
+  }
+  #login-btn{
+    color: white;
+    background-color: black;
+  }
+  #signup-btn{
+
+  }

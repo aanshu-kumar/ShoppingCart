@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
           email.value = "";
           password.value = "";
           confirmPassword.value = "";
+          window.location.href="/shop/index.html"
         }
       }
     });

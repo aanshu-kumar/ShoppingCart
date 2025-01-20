@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <input id="email" placeholder="Enter the Email"><br>
-    <input id="password" placeholder="Password"><br>
+    <nav>
+        <div class="brand">
+          <a href="/">MeShop.</a>
+        </div>
+        <div class="nav-items">
+          <a href="/">Home</a>
+          <a href="/login">Login</a>
+          <a href="/signup">Signup</a>
+        </div>
+      </nav>
+    <main>
+      <h2>Login</h2>
+    <section>
+    <label for="email">Enter your Email:</label>
+    <input id="email" placeholder="example@abc.com">
+    <label for="password">Enter the Password:</label>
+    <input id="password" placeholder="password"><br>
     <button id="login">Login</button>
     <p id="error_msg"></p>
+    </section> 
+    </main>
     <script src="./script.js"></script>
     
 </body>

@@ -7,13 +7,32 @@
     <link rel="Stylesheet" href="./style.css">
 </head>
 <body>
-    <input id="fname" type="text" placeholder="First Name"><br>
-    <input id="lname" type="text" placeholder="Last Name"><br>
-    <input id="email" type="email" placeholder="Email"><br>
-    <input id="password" type="Password" placeholder="Password"><br>
+    <nav>
+        <div class="brand">
+          <a href="/">MeShop.</a>
+        </div>
+        <div class="nav-items">
+          <a href="/">Home</a>
+          <a href="/login">Login</a>
+          <a href="/signup">Signup</a>
+        </div>
+      </nav>
+    <main>
+      <h2>Signup</h2>
+      <section>
+    <label for="fname">Enter First Name:</label>
+    <input id="fname" type="text" placeholder="First Name">
+    <label for="lname">Enter Last Name:</label>
+    <input id="lname" type="text" placeholder="Last Name">
+    <label for="email">Enter your Email:</label>
+    <input id="email" type="email" placeholder="Email">
+    <label for="password">Enter the Password:</label>
+    <input id="password" type="Password" placeholder="Password">
     <input id="confirmPassword" type="text" placeholder="Confirm Password"><br>
     <button id="loginBtn">Submit</button>
     <p id="errorMsg"></p>
+</section> 
+</main>
     
     <script src="./script.js"></script>
 </body>
