@@ -6,24 +6,46 @@
     <title>Profile</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
   </head>
   <body>
-   
-    <h1>Profile</h1>
-    <p>Update user Information</p>
-    <input id="fname" placeholder="Enter your First Name"><br>
-    <input id="lname" placeholder="Enter your Last Name"><br>
-    <input id="email" disabled>
+    <nav>
+      <div class="brand">
+        <a href="/">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        <a href="/cart">My Cart</a>
+        <a href="/profile">Profile</a>
+      </div>
+    </nav>
+   <main>
+    <h2>Edit Profile</h2>
+    <section>
+    <p style="font-weight: 600; font-size: 20px;">Update user Information:-</p>
+    <label for="fname">Enter new first name:</label>
+    <input id="fname" placeholder="Enter your First Name">
+    <label for="lname">Enter new last name:</label>
+    <input id="lname" placeholder="Enter your Last Name">
+    <input id="email" disabled><br>
     <button id="submit"> Submit</button>
     <p id="error_msg"></p>
-    <p>Update Credentials</p>
-    <input id="oldpassword" placeholder="Enter your Old Password"><br>
-    <input id="newpassword" placeholder="Enter your New Password"><br>
+    </section>
+    <section>
+    <p style="font-weight: 600; font-size: 20px;">Update Credentials:- </p>
+    <label for="oldpassword">Enter your old password:</label>
+    <input id="oldpassword" placeholder="Enter your Old Password">
+    <label for="newpassword">Enter your new password:</label>
+    <input id="newpassword" placeholder="Enter your New Password">
     <input id="confirmpassword" placeholder="Enter confirm password"> <br>
     <button id="changePasswordBtn"> Change Password</button>
     <p id="error_msg2"></p>
-
+  </section>
+  </main>
     <script src="./script.js"></script>
   </body>
 </html>

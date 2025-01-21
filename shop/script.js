@@ -4,7 +4,6 @@ let sizes = ["S", "M", "L", "XL"];
 let products;
 let data = [];
 
-
 let currentUser = JSON.parse(localStorage.getItem("currentUsr"));
 if (!currentUser) window.location.href = "../login/index.html";
 else {
@@ -45,6 +44,8 @@ function renderProducts() {
   let electronics = document.getElementById("electronics");
   electronics.innerHTML = ``;
 
+  let cart = JSON.parse(localStorage.getItem("cart")?localStorage.getItem("cart"):"[]");
+
   products.map((item) => {
     let Item = document.createElement("div");
     Item.setAttribute("class", "item");
@@ -66,8 +67,11 @@ function renderProducts() {
                 </div>
                 <div class="row">Rating:${item.rating.rate}</div>
               </div>
-              <button id="addBtn${item.id}" onclick="addToCart(${item.id})">Add to Cart</button>
-              <button style="color: black; background-color: white; display: none; border: 1px solid black;" id="delBtn${item.id}" onclick="delfromCart(${item.id})">Remove from Cart</button>
+              ${
+                cart.includes(item.id) 
+                  ? `<button style="color: black; background-color: white; border: 1px solid black;" id="delBtn${item.id}" onclick="delfromCart(${item.id})">Remove from Cart</button>`
+                  : `<button id="addBtn${item.id}" onclick="addToCart(${item.id})">Add to Cart</button>`
+              }
       `;
     if (item.category == "electronics") electronics.appendChild(Item);
     else if (item.category == "jewelery") jewelery.appendChild(Item);
@@ -108,32 +112,25 @@ function removeActive() {
 }
 
 // Add to Cart;
-function addToCart(id){
-  document.getElementById(`addBtn${id}`).style.display = "none";
-  document.getElementById(`delBtn${id}`).style.display = "block";
-  if(localStorage.getItem("cart"))
-  {
-  let currCart = JSON.parse(localStorage.getItem("cart"));
-  currCart.push(id);
-  localStorage.setItem("cart",JSON.stringify(currCart));
+function addToCart(id) {
+  if (localStorage.getItem("cart")) {
+    let currCart = JSON.parse(localStorage.getItem("cart"), "[]");
+    currCart.push(id);
+    localStorage.setItem("cart", JSON.stringify(currCart));
+  } else {
+    localStorage.setItem("cart", JSON.stringify([id]));
   }
-  else{
-    localStorage.setItem("cart",JSON.stringify([id]));
-  }
+  renderProducts()
 }
 //remove from cart
-function delfromCart(id){
-  document.getElementById(`delBtn${id}`).style.display = "none";
-  document.getElementById(`addBtn${id}`).style.display = "block";
+function delfromCart(id) {
 
-
-  if(localStorage.getItem("cart"))
-  {
-  let currCart = JSON.parse(localStorage.getItem("cart"));
-  currCart.pop(id);
-  localStorage.setItem("cart",JSON.stringify(currCart));
+  if (localStorage.getItem("cart")) {
+    let currCart = JSON.parse(localStorage.getItem("cart"));
+    currCart = currCart.filter((item_id) => item_id != id);
+    localStorage.setItem("cart", JSON.stringify(currCart));
   }
-
+  renderProducts()
 }
 // color filter
 
@@ -225,18 +222,18 @@ function priceFilter() {
 }
 
 let range = document.getElementById("range");
-range.addEventListener("click",()=>{
-    products = products.filter((item)=>item.rating.rate>=range.value);
-    renderProducts();
-})
+range.addEventListener("click", () => {
+  products = products.filter((item) => item.rating.rate >= range.value);
+  renderProducts();
+});
 
 // search function
 
-document.getElementById("search-input").addEventListener("input",()=>{
+document.getElementById("search-input").addEventListener("input", () => {
   let search = document.getElementById("search-input").value.toLowerCase();
 
-  products = products.filter((item)=>{
-    return(item.title.toLowerCase().includes(search))
+  products = products.filter((item) => {
+    return item.title.toLowerCase().includes(search);
   });
   renderProducts();
-})
+});
