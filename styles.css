@@ -21,6 +21,9 @@ a {
 ul {
   list-style: none;
 }
+#small-menu{
+  display: none;
+}
 
 nav {
     display: flex;
@@ -30,7 +33,6 @@ nav {
     position: sticky;
     z-index: 100;
     top: 0;
-  
     background-color: black;
     border-bottom: 1px solid white;
     padding: 1rem;
@@ -85,6 +87,51 @@ nav {
     color: white;
     background-color: black;
   }
-  #signup-btn{
 
+
+  /* sm */
+  @media (max-width:640px) {
+    button{
+    padding: 8px 40px;
+    }
+    main h1{
+      font-size: 30px;
+    }
+    main p{
+      font-size: 16px;
+    }
+    #small-menu{
+      display: block;
+      border-radius: 10px;
+    }
+    .nav-items{
+      display: none;
+    }
+    #sm-items{
+      display: none;
+      padding: 30px 40px;
+      gap: 8px;
+      flex-direction: column;
+      position: absolute;
+      right: 0px;
+      background-color: black;
+      top: 80px;
+    }
   }
+   /* md */
+   /* @media (max-width:768px) {} */
+    /* lg */
+  @media (max-width:1024px) {
+    #container{
+      flex-direction: column;
+      align-items: center;
+    }
+    #btn{
+      width: 100%;
+    }
+    #img{
+      width: 90%;
+    }
+  }
+   /* xl */
+   /* @media (max-width:1280px) {} */

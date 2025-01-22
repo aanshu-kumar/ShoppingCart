@@ -86,3 +86,68 @@ nav {
     font-weight: 400;
     letter-spacing: 20px;
   }
+
+  #sm-items{
+    display: none;
+  }
+  #small-menu{
+    display: none;
+  }
+
+  
+  /* sm */
+  @media (max-width:640px) {
+
+  
+    #small-menu{
+      display: block;
+      border-radius: 10px;
+    }
+    .nav-items{
+      display: none;
+    }
+    #sm-items{
+      display: none;
+      padding: 30px 40px;
+      gap: 8px;
+      flex-direction: column;
+      position: absolute;
+      right: 0px;
+      background-color: black;
+      top: 80px;
+    }
+    
+    main{
+      width: 90%;
+      margin: 60px auto;
+    }
+    input{
+      width: 100%;
+    }
+  }
+   /* md */
+   @media (max-width:768px) {
+
+    main{
+      width: 90%;
+      margin: 60px auto;
+    }
+    input{
+      width: 100%;
+    }
+   }
+    /* lg */
+  @media (max-width:1024px) {
+    main{
+      flex-direction: column;
+    }
+    input{
+      width: 100%;
+    }
+    button{
+      width: 100%;
+    }
+    section{
+      width: 80%;
+    }
+  }

@@ -9,3 +9,8 @@ loginBtn.addEventListener("click",()=>{
 signupBtn.addEventListener("click",()=>{
     window.location.href='/signup/index.html'; 
  })
+let click = false;
+document.getElementById("small-menu").addEventListener("click", () => {
+   click = !click;
+   document.getElementById("sm-items").style.display = click ? "flex" : "none";
+});

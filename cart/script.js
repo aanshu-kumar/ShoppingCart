@@ -82,3 +82,8 @@ document.getElementById("checkout-btn").onclick = function (e) {
     // e.preventDefault();
   };
   
+  let click = false;
+document.getElementById("small-menu").addEventListener("click", () => {
+   click = !click;
+   document.getElementById("sm-items").style.display = click ? "flex" : "none";
+});

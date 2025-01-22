@@ -52,7 +52,7 @@ function renderProducts() {
     Item.innerHTML = `
                  <img src=${item.image} alt="Item" />
               <div class="info">
-              <h2>${item.title}</h2>
+              <h4>${item.title.length>40 ? item.title.slice(0,40)+"..." : item.title}</h4>
                 <div class="row">
                   <div class="price">$${item.price}</div>
                   <div class="sized">${item.size.map((item) => item)}</div>
@@ -237,3 +237,15 @@ document.getElementById("search-input").addEventListener("input", () => {
   });
   renderProducts();
 });
+
+
+let click = false;
+document.getElementById("small-menu").addEventListener("click", () => {
+   click = !click;
+   document.getElementById("sm-items").style.display = click ? "flex" : "none";
+});
+let filter_click = false;
+document.getElementById("filter").addEventListener("click", () => {
+  filter_click = !filter_click;
+  document.getElementById("filter-menu").style.display = filter_click ? "block" : "none";
+})

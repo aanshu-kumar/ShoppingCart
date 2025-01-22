@@ -130,3 +130,38 @@ display: block;
 margin: 10px auto;
 object-fit: contain;
 }
+
+#sm-items{
+  display: none;
+}
+#small-menu{
+  display: none;
+}
+
+
+  /* sm */
+  @media (max-width:640px) {
+    #small-menu{
+      display: block;
+      border-radius: 10px;
+    }
+    .nav-items{
+      display: none;
+    }
+    #sm-items{
+      display: none;
+      padding: 30px 40px;
+      gap: 8px;
+      flex-direction: column;
+      position: absolute;
+      right: 0px;
+      background-color: black;
+      top: 80px;
+    }
+  }
+   /* md */
+   /* @media (max-width:768px) {} */
+    /* lg */
+  /* @media (max-width:1024px) {} */
+   /* xl */
+   /* @media (max-width:1280px) {} */
