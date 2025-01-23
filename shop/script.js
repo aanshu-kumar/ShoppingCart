@@ -59,9 +59,9 @@ function renderProducts() {
                 </div>
                 <div class="colors">
                   Colors:
-                  <div class="row">
+                  <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
                   ${item.color.map((clr) => {
-                    return `<div class="circle" style="background-color: ${clr}"></div>`;
+                    return `<div class="circle" style="background-color: ${clr};"></div>`;
                   })}
                   </div>
                 </div>

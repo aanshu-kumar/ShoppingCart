@@ -87,6 +87,12 @@ nav {
     color: white;
     background-color: black;
   }
+  #sm-items{
+    display: none;
+  }
+  #small-menu{
+    display: none;
+  }
 
 
   /* sm */
