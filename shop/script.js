@@ -249,3 +249,8 @@ document.getElementById("filter").addEventListener("click", () => {
   filter_click = !filter_click;
   document.getElementById("filter-menu").style.display = filter_click ? "block" : "none";
 })
+
+document.getElementById("logout").addEventListener("click", () => {
+  localStorage.removeItem("currentUsr");
+  window.location.href = "../login/index.html";
+});

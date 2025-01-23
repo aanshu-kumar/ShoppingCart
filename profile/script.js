@@ -70,3 +70,8 @@ document.getElementById("small-menu").addEventListener("click", () => {
    click = !click;
    document.getElementById("sm-items").style.display = click ? "flex" : "none";
 });
+
+document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("currentUsr");
+    window.location.href = "../login/index.html";
+  });
